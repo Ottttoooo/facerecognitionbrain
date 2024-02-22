@@ -27,7 +27,7 @@ class Register extends Component {
     }
 
     onSubmitRegister() {
-        fetch('http://localhost:4000/register', {
+        fetch('https://vast-scrubland-48720-deee0e75a1ba.herokuapp.com/register', {
             method: 'post',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

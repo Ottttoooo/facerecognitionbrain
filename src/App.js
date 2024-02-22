@@ -65,7 +65,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imgUrl: this.state.input})
-    fetch('http://localhost:4000/imageUrl', {
+    fetch('https://vast-scrubland-48720-deee0e75a1ba.herokuapp.com/imageUrl', {
         method: 'post',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify({
@@ -76,7 +76,7 @@ class App extends Component {
     .then(result => {
       if(!result) throw new Error("Shit went wrong"); 
       this.displayFaceBox(this.calculateFaceLocation(result));
-      return fetch('http://localhost:4000/image', {
+      return fetch('https://vast-scrubland-48720-deee0e75a1ba.herokuapp.com/image', {
         method: 'put',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify({
